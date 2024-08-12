@@ -17,6 +17,7 @@
   "license": "ISC",
   "description": "Aplicação para esdudo de um sitema de gestão de uma locadora de filmes",
   "dependencies": {
+    "locadoradefilmes": "file:",
     "mysql2": "^3.11.0",
     "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.20",

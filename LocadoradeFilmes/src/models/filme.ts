@@ -1,6 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToMany, JoinTable } from 'typeorm';
 import { Genero } from './genero';
 
+
+//estudar documentação do typeorm
+
 @Entity()
 export class Filme {
     @PrimaryGeneratedColumn({ type: "int" })
