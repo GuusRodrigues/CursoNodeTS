@@ -2,7 +2,7 @@ export const config = {
     HOST: "localhost",
     PORT: 3306,
     USER: "root",
-    PASSWORD: "root",
+    PASSWORD: "1234",
     DB: "adsFilmes",
     pool: {
         max: 5,

@@ -7,7 +7,7 @@ export class Genero {
     idGenero: number;
 
     @Column({ length: 45, nullable: false })
-    nome: string;
+    nome: string; //É obrigatório (não aceita vazio)
 
     @ManyToMany(() => Filme, filme => filme.generos)
     filmes?: Filme[];  // o '?' diz que não é obrigatório um genero ter filmes

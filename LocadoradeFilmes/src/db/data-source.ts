@@ -1,8 +1,8 @@
 import "reflect-metadata"
-import { DataSource } from "typeorm" //utilizando o framework
+import { DataSource } from "typeorm"
 import { config, dialect } from "../config/db.config"
-//import { Genero } from "../models/genero"
-//import { Filme } from "../models/filme"
+import { Genero } from "../models/genero"
+import { Filme } from "../models/filme"
 
 export const AppDataSource = new DataSource({
     type: dialect,
@@ -11,7 +11,7 @@ export const AppDataSource = new DataSource({
     username: config.USER,
     password: config.PASSWORD,
     database: config.DB,
-    entities: [], //Genero, Filme
+    entities: [Genero, Filme],
     synchronize: false,
     logging: false,
 })
