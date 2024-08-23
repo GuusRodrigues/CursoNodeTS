@@ -8,9 +8,9 @@ export default class GeneroController {
 
 //cada método do repository tem que ter um método correspondente no controller
 
-    //Cadastro de gênero
+    //Cadastro de gênero pelo nome.
     async create(req: Request, res: Response) {
-        if (!req.body.nome) { //Se o request não tiver nome responde com o erro
+        if (!req.body.nome) { //Torna o nome obrigatório para cadastro
             res.status(400).send({  // Código 400 significa erro de vazio (códigos do padrão http)
                 message: "Não pode ser vazio o gênero!"
             });
@@ -42,6 +42,7 @@ export default class GeneroController {
         }
     }
 
+    //Retorna um genero pelo id
     async findOne(req: Request, res: Response) {
         const id: number = parseInt(req.params.id);
 
@@ -59,6 +60,7 @@ export default class GeneroController {
         }
     }
 
+    // Retorna um genero específico pelo seu nome
     async findName(req: Request, res: Response) {
         const nome: string = req.params.nome;
 
